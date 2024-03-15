@@ -1,0 +1,343 @@
+:root{
+   --green:#33cc34;
+   --orange:#f39c12;
+   --red:#e74c3c;
+   --black:#333;
+   --light-color:#666;
+   --white:#fff;
+   --light-bg:#f6f6f6;
+   --border:.2rem solid var(--black);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+.dashboard .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+   gap:1.5rem;
+   align-items: flex-start;
+}
+
+.dashboard .box-container .box{
+   padding:1.5rem;
+   text-align: center;
+   border:var(--border);
+   box-shadow: var(--box-shadow);
+   background-color: var(--white);
+   border-radius: .5rem;
+}
+
+.dashboard .box-container .box h3{
+   font-size: 3.5rem;
+   color:var(--black);
+}
+
+.dashboard .box-container .box p{
+   font-size: 2rem;
+   background-color: var(--light-bg);
+   color:var(--light-color);
+   padding:1.5rem;
+   margin:1rem 0;
+   border:var(--border);
+   border-radius: .5rem;
+   color:var(--black);
+}
+
+.add-products {
+   max-width: 800px;
+   margin: 20px auto;
+   padding: 20px;
+   background-color: #1e1e1e; /* Slightly lighter dark shade for the form background */
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Neon green glow */
+}
+
+.add-products .title {
+   text-align: center;
+   color: #0f0; /* Neon green text */
+   margin-bottom: 20px;
+}
+
+.add-products .flex {
+   display: flex;
+   gap: 20px;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.add-products .flex .inputBox {
+   flex-basis: 48%; /* Adjust based on preference */
+}
+
+.add-products .flex .inputBox .box {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 10px;
+   background-color: #262626; /* Even lighter dark shade for input backgrounds */
+   border: 1px solid #0f0; /* Neon green borders */
+   border-radius: 4px;
+   color: #fff;
+}
+
+.add-products .flex .inputBox .box::placeholder {
+   color: #aaa; /* Lighter placeholder text for contrast */
+}
+
+.add-products .flex .textarea.box {
+   height: auto; /* Adjust height for textarea specifically */
+}
+
+.add-products .flex .btn {
+   display: inline-block;
+   background-color: #0f0; /* Neon green background */
+   color: #000; /* Dark text */
+   padding: 10px 30px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background-color 0.3s, color 0.3s;
+}
+
+.add-products .flex .btn:hover {
+   background-color: #0c0; /* Slightly different shade of green for hover */
+   color: #fff;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+   .add-products .flex {
+       flex-direction: column;
+   }
+
+   .inputBox {
+       flex-basis: 100%;
+   }
+}
+
+.show-products {
+   /* Add any styles you want for the section */
+   background-color: aliceblue;
+}
+
+.show-products .box-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+}
+
+.show-products .box-container .box {
+   width: 100%; /* Adjust as needed */
+   border: 1px solid #ccc;
+   padding: 10px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.show-products .box-container .box .product-info {
+   display: flex;
+   align-items: center;
+}
+
+.show-products .box-container .box .product-info img {
+   width: 40px; /* Adjust the image size as needed */
+   height: auto;
+   margin-right: 10px;
+}
+
+.show-products .box-container .box .flex-btn {
+   display: flex;
+   align-items: center;
+}
+
+.show-products .delete-btn {
+   color: red;
+   background: none;
+   border: none;
+   cursor: pointer;
+}
+
+.show-products .box-container .box .cat{
+   font-size: 1.8rem;
+   color:#33cc37;
+}
+
+.show-products .box-container .box .details{
+   padding-top: 1rem;
+   font-size: 1.5rem;
+   line-height: 1.5;
+   color:var(--light-color);
+}
+
+.update-product form{
+   max-width: 50rem;
+   padding:2rem;
+   margin:0 auto;
+   text-align: center;
+   border:var(--border);
+   box-shadow: var(--box-shadow);
+   background-color: var(--white);
+   border-radius: .5rem;
+}
+
+.update-product form img{
+   height: 25rem;
+   object-fit: cover;
+   margin-bottom: 1rem;
+}
+
+.update-product form .box{
+   width: 100%;
+   border:var(--border);
+   background-color: var(--white);
+   border-radius: .5rem;
+   background-color: var(--light-bg);
+   padding:1.2rem 1.4rem;
+   font-size: 1.8rem;
+   color:var(--black);
+   margin:1rem 0;
+}
+
+.placed-orders .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 33rem);
+   gap:1.5rem;
+   align-items: flex-start;
+   justify-content:center;
+}
+
+.placed-orders .box-container .box{
+   border:var(--border);
+   box-shadow: var(--box-shadow);
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding:2rem;
+}
+
+.placed-orders .box-container .box p{
+   margin-bottom: 1rem;
+   line-height: 1.5;
+   font-size: 2rem;
+   color:var(--light-color);
+}
+
+.placed-orders .box-container .box p span{
+   color:var(--green);
+}
+
+.placed-orders .box-container .box .drop-down{
+   width: 100%;
+   padding:1.2rem 1.4rem;
+   font-size: 1.8rem;
+   border:var(--border);
+   border-radius: .5rem;
+   background-color: var(--light-bg);
+   margin-bottom: .5rem;
+}
+
+.user-accounts .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 33rem);
+   gap:1.5rem;
+   align-items: flex-start;
+   justify-content:center;
+}
+
+.user-accounts .box-container .box{
+   border:var(--border);
+   box-shadow: var(--box-shadow);
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding:2rem;
+   text-align: center;
+}
+
+.user-accounts .box-container .box img{
+   height: 15rem;
+   width: 15rem;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-bottom: 1rem;
+}
+
+.user-accounts .box-container .box p{
+   line-height: 1.5;
+   padding:.5rem 0;
+   font-size: 2rem;
+   color:var(--light-color);
+}
+
+.user-accounts .box-container .box p span{
+   color:var(--green);
+}
+
+.messages .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 33rem);
+   gap:1.5rem;
+   align-items: flex-start;
+   justify-content:center;
+}
+
+.messages .box-container .box{
+   border:var(--border);
+   box-shadow: var(--box-shadow);
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding:2rem;
+}
+
+.messages .box-container .box p{
+   line-height: 1.5;
+   padding:.5rem 0;
+   font-size: 2rem;
+   color:var(--light-color);
+}
+
+.messages .box-container .box p span{
+   color:var(--green);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px){
+
+   .add-products form .flex .inputBox{
+      width: 100%;
+   }
+
+}
+
+
+
+@media (max-width:450px){
+
+   .show-products .box-container{
+      grid-template-columns: 1fr;
+   }
+
+   .update-product form img{
+      height: auto;
+      width: 100%;
+   }
+
+   .placed-orders .box-container{
+      grid-template-columns: 1fr;
+   }
+
+   .user-accounts .box-container{
+      grid-template-columns: 1fr;
+   }
+
+   .messages .box-container{
+      grid-template-columns: 1fr;
+   }
+
+}

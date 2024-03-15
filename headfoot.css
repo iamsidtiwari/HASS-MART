@@ -1,0 +1,151 @@
+
+.header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+ }
+ 
+ .header .flex .logo{
+    font-size: 2.5rem;
+    color:var(--black);
+ }
+ 
+ .header .flex .logo span{
+    color:var(--green);
+ }
+ 
+ .header .flex .navbar a{
+    margin:0 1rem;
+    font-size: 2rem;
+    color:var(--light-color);
+ }
+ 
+ .header .flex .navbar a:hover{
+    text-decoration: underline;
+    color:var(--green);
+ }
+ 
+ .header .flex .icons > *{
+    font-size: 2.5rem;
+    color:var(--light-color);
+    cursor: pointer;
+    margin-left: 1.5rem;
+ }
+ 
+ .header .flex .icons > *:hover{
+    color:var(--green);
+ }
+ 
+ .header .flex .icons a span,
+ .header .flex .icons a i{
+    color:var(--light-color);
+ }
+ 
+ .header .flex .icons a:hover span,
+ .header .flex .icons a:hover i{
+    color:var(--green);
+ }
+ 
+ .header .flex .icons a span{
+    font-size: 2rem;
+ }
+ 
+ #menu-btn{
+    display: none;
+ }
+ 
+ .header .flex .profile{
+    position: absolute;
+    top:120%; right:2rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+    padding:2rem;
+    text-align: center;
+    background-color: var(--white);
+    width: 33rem;
+    display: none;
+    animation: fadeIn .2s linear;
+ }
+ 
+ .header .flex .profile.active{
+    display: inline-block;
+ }
+ 
+ .header .flex .profile img{
+    height: 15rem;
+    width: 15rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+ }
+ 
+ .header .flex .profile p{
+    padding:.5rem 0;
+    font-size: 2rem;
+    color:var(--light-color);
+ }
+ @media (max-width:991px){
+
+    html{
+       font-size: 55%;
+    }
+    
+ }
+ 
+ @media (max-width:768px){
+ 
+    #menu-btn{
+       display: inline-block;
+    }
+ 
+    .header .flex .navbar{
+       border-top: var(--border);
+       border-bottom: var(--border);
+       background-color: var(--white);
+       position: absolute;
+       top:99%; left:0; right:0;
+       transition: .2s linear;
+       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+ 
+    .header .flex .navbar.active{
+       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+ 
+    .header .flex .navbar a{
+       display: block;
+       margin:2rem;   
+    }
+ 
+    .update-profile form .flex{
+       flex-wrap: wrap;
+       gap:0;
+    }
+ 
+    .update-profile form .flex .inputBox{
+       width: 100%;
+    }
+ 
+ }
+ 
+ @media (max-width:450px){
+ 
+    html{
+       font-size: 50%;
+    }
+ 
+    .flex-btn{
+       flex-flow: column;
+       gap:0;
+    }
+ 
+    .title{
+       font-size: 3rem;
+    }
+    
+ }

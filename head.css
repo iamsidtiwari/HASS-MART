@@ -1,0 +1,144 @@
+/* head.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    background-color: #0078d4; /* Walmart's blue color */
+}
+
+.header {
+    padding: 15px 0;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.icons a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.user-profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-profile p {
+    margin: 0;
+    color: white;
+}
+
+.search-form {
+    background-color: #f8f8f8; /* Walmart's search bar background color */
+    padding: 15px;
+    text-align: center;
+}
+
+.search-form input,
+.search-form select,
+.search-form .btn {
+    margin: 5px;
+}
+
+.products {
+    background-color: #f8f8f8; /* Walmart's product background color */
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.box {
+    background-color: white;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0078d4; /* Walmart's blue color */
+}
+
+.name {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.qty {
+    width: 50px;
+    margin-right: 5px;
+}
+
+.empty {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #0078d4; /* Walmart's blue color */
+}
+
+.btn,
+.option-btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #0078d4; /* Walmart's blue color */
+    color: white;
+    border: none;
+}
+
+.option-btn {
+    background-color: #f8f8f8;
+    color: #0078d4; /* Walmart's blue color */
+    border: 1px solid #0078d4; /* Walmart's blue color */
+}
+
+.option-btn:hover {
+    background-color: #0078d4; /* Walmart's blue color */
+    color: white;
+}
+
+.btn:hover {
+    background-color: #00539f; /* Walmart's dark blue color on hover */
+}

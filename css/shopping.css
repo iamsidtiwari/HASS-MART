@@ -1,0 +1,607 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    background: #1f1f1f;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.product-image img {
+    max-width: 50%;
+    display: block;
+    margin: 0 auto 20px; /* Added margin for spacing */
+    border-radius: 8px;
+}
+
+
+.product-info {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.product-info h1 {
+    margin: 15px 0;
+    color: #00ffae;
+}
+
+.product-info p {
+    font-size: 14px; /* Adjusted font size */
+    color: linear-gradient(45deg, #ff0099, #493240); /* Dark gray text color */
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+.btn {
+    background: linear-gradient(45deg, #ff0099, #493240);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #493240, #ff0099);
+}
+
+.qty {
+    width: 60px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+}
+
+.product-details {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.product-details h2 {
+    color: #00ffae;
+    border-bottom: 2px solid #00ffae;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.product-suggestions .card {
+    position: relative;
+    border-radius: 8px;
+    border: 4px solid #3498db; /* Blue border color */
+    width: 220px;
+    height: 240px;
+    margin: 10px;
+    text-align: center;
+    background-color: #ecf0f1; /* Light gray background color */
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.product-suggestions .card:hover {
+    transform: scale(1.01); /* Improved hover effect */
+}
+
+.product-suggestions .card img {
+    max-width: 50%; /* Set max-width to 40% */
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.card {
+    background: #292929;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/*.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+*/
+.card h4 {
+    font-size: 14px; /* Adjusted font size */
+    color: linear-gradient(45deg, #ff0099, #493240); /* Dark gray text color */
+    padding: 3px;
+    margin-bottom: 5px; /* Add margin to improve visibility */
+}
+
+.card p {
+    font-size: 14px; /* Adjusted font size */
+    color: linear-gradient(45deg, #ff0099, #493240); /* Dark gray text color */
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+ }
+
+ .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Increased border-radius for a softer look */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 400px; /* Adjust the max-width as per your design */
+    margin: 0 auto; /* Center the popup content */
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
+
+/* Electronic Products Section */
+/* Electronic Products Section */
+.electronic-products {
+    background-color: rgb(233, 223, 223);
+    padding: 10px 0;
+    text-align: left;
+}
+
+.electronic-products .title {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.electronic-products .pbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.electronic-products .pbox {
+    position: relative;
+    border-radius: 2px;
+    border: 2px solid #0a0b0e; /* Blue border color */
+    width: 220px;
+    height: 240px;
+    margin: 10px;
+    text-align: center;
+    background-color: white; /* Light gray background color */
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.electronic-products .pbox:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #db3495; /* Glow effect on hover */
+}
+
+.electronic-products .pbox img {
+    max-width: 70%; /* Set max-width to 40% */
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.electronic-products .pbox .name {
+    font-size: 17px; /* Adjusted font size */
+    color: black; /* Dark gray text color */
+    padding: 3px;
+    margin-bottom: 5px; /* Add margin to improve visibility */
+}
+
+.electronic-products .pbox .price {
+    background: #e74c3c; /* Red background color for price */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px; /* Adjusted font size */
+}
+
+.electronic-products .pbox .btn-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.electronic-products .pbox .btn, .electronic-products .pbox .option-btn {
+    background: #33cc33; /* Red button color for "Add to Wishlist" */
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold; /* Adjusted font size */
+    margin: 5px; /* Add minimal gap between buttons */
+    transition: background-color 0.3s;
+}
+.electronic-products .pbox .option-btn {
+    background:  rgb(255, 171, 3);  /* Red button color for "Add to Wishlist" */
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 10px; /* Adjusted font size */
+    margin: 5px; /* Add minimal gap between buttons */
+    transition: background-color 0.3s;
+    font-weight: bold
+}
+
+.electronic-products .pbox .btn:hover, .electronic-products .pbox .option-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #18a01c; /* Glow effect on hover */
+    color: white; /* White text color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .electronic-products .pbox {
+        width: calc(50% - 20px);
+        height: 200px; /* Adjusted height for smaller screens */
+    }
+}
+
+
+/*  grocery products */
+/* grocery Products Section */
+/* grocery Products Section */
+.grocery-products {
+    background-color: rgb(245, 236, 236);
+    padding: 10px 0;
+    text-align: left;
+}
+
+.grocery-products .title {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.grocery-products .pbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.grocery-products .pbox {
+    position: relative;
+    border-radius: 2px;
+    border: 2px solid #0a0b0e; /* Blue border color */
+    width: 220px;
+    height: 240px;
+    margin: 10px;
+    text-align: center;
+    background-color: white; /* Light gray background color */
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grocery-products .pbox:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #db3495; /* Glow effect on hover */
+}
+
+.grocery-products .pbox img {
+    max-width: 70%; /* Set max-width to 40% */
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.grocery-products .pbox .name {
+    font-size: 17px; /* Adjusted font size */
+    color: black; /* Dark gray text color */
+    padding: 3px;
+    margin-bottom: 5px; /* Add margin to improve visibility */
+}
+
+.grocery-products .pbox .price {
+    background: #e74c3c; /* Red background color for price */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px; /* Adjusted font size */
+}
+
+.grocery-products .pbox .btn-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.grocery-products .pbox .btn, .grocery-products .pbox .option-btn {
+    background: #33cc33; /* Red button color for "Add to Wishlist" */
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold; /* Adjusted font size */
+    margin: 5px; /* Add minimal gap between buttons */
+    transition: background-color 0.3s;
+}
+.grocery-products .pbox .option-btn {
+    background:  rgb(255, 171, 3);  /* Red button color for "Add to Wishlist" */
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 10px; /* Adjusted font size */
+    margin: 5px; /* Add minimal gap between buttons */
+    transition: background-color 0.3s;
+    font-weight: bold
+}
+
+.grocery-products .pbox .btn:hover, .grocery-products .pbox .option-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #18a01c; /* Glow effect on hover */
+    color: white; /* White text color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .grocery-products .pbox {
+        width: calc(50% - 20px);
+        height: 200px; /* Adjusted height for smaller screens */
+    }
+}
+/*  grocery products */
+/* grocery Products Section */
+/* grocery Products Section */
+.grocery-products {
+    background-color: rgb(245, 236, 236);
+    padding: 10px 0;
+    text-align: left;
+}
+
+.grocery-products .title {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.grocery-products .pbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.grocery-products .pbox {
+    position: relative;
+    border-radius: 2px;
+    border: 2px solid #0a0b0e; /* Blue border color */
+    width: 220px;
+    height: 240px;
+    margin: 10px;
+    text-align: center;
+    background-color: white; /* Light gray background color */
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grocery-products .pbox:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #db3495; /* Glow effect on hover */
+}
+
+.grocery-products .pbox img {
+    max-width: 70%; /* Set max-width to 40% */
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.grocery-products .pbox .name {
+    font-size: 17px; /* Adjusted font size */
+    color: black; /* Dark gray text color */
+    padding: 3px;
+    margin-bottom: 5px; /* Add margin to improve visibility */
+}
+
+.grocery-products .pbox .price {
+    background: #e74c3c; /* Red background color for price */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px; /* Adjusted font size */
+}
+
+.grocery-products .pbox .btn-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.grocery-products .pbox .btn, .grocery-products .pbox .option-btn {
+    background: #33cc33; /* Red button color for "Add to Wishlist" */
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold; /* Adjusted font size */
+    margin: 5px; /* Add minimal gap between buttons */
+    transition: background-color 0.3s;
+}
+.grocery-products .pbox .option-btn {
+    background:  rgb(255, 171, 3);  /* Red button color for "Add to Wishlist" */
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 10px; /* Adjusted font size */
+    margin: 5px; /* Add minimal gap between buttons */
+    transition: background-color 0.3s;
+    font-weight: bold
+}
+
+.grocery-products .pbox .btn:hover, .grocery-products .pbox .option-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #18a01c; /* Glow effect on hover */
+    color: white; /* White text color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .grocery-products .pbox {
+        width: calc(50% - 20px);
+        height: 200px; /* Adjusted height for smaller screens */
+    }
+}
+/*  clothing products */
+/* clothing Products Section */
+/* clothing Products Section */
+.clothing-products {
+    background-color: rgb(245, 236, 236);
+    padding: 10px 0;
+    text-align: left;
+}
+
+.clothing-products .title {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.clothing-products .pbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.clothing-products .pbox {
+    position: relative;
+    border-radius: 2px;
+    border: 2px solid #0a0b0e; /* Blue border color */
+    width: 220px;
+    height: 240px;
+    margin: 10px;
+    text-align: center;
+    background-color: white; /* Light gray background color */
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.clothing-products .pbox:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #db3495; /* Glow effect on hover */
+}
+
+.clothing-products .pbox img {
+    max-width: 70%; /* Set max-width to 40% */
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.clothing-products .pbox .name {
+    font-size: 17px; /* Adjusted font size */
+    color: black; /* Dark gray text color */
+    padding: 3px;
+    margin-bottom: 5px; /* Add margin to improve visibility */
+}
+
+.clothing-products .pbox .price {
+    background: #e74c3c; /* Red background color for price */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px; /* Adjusted font size */
+}
+
+.clothing-products .pbox .btn-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.clothing-products .pbox .btn, .clothing-products .pbox .option-btn {
+    background: #33cc33; /* Red button color for "Add to Wishlist" */
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold; /* Adjusted font size */
+    margin: 5px; /* Add minimal gap between buttons */
+    transition: background-color 0.3s;
+}
+.clothing-products .pbox .option-btn {
+    background:  rgb(255, 171, 3);  /* Red button color for "Add to Wishlist" */
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 10px; /* Adjusted font size */
+    margin: 5px; /* Add minimal gap between buttons */
+    transition: background-color 0.3s;
+    font-weight: bold
+}
+
+.clothing-products .pbox .btn:hover, .clothing-products .pbox .option-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #18a01c; /* Glow effect on hover */
+    color: white; /* White text color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .clothing-products .pbox {
+        width: calc(50% - 20px);
+        height: 200px; /* Adjusted height for smaller screens */
+    }
+}

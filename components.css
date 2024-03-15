@@ -1,0 +1,169 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0a0b0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('project images/hassmartbg1.jpg'); /* Add your own background */
+    background-size: cover;
+    background-position: center;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    width: 300px;
+}
+
+.form-container h3 {
+    color: #0f0;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="text"],
+.form-container input[type="cpass"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #222;
+    border-radius: 5px;
+    color: #0f0;
+    font-size: 16px;
+}
+
+.form-container .btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: linear-gradient(90deg, rgba(0,255,0,1) 0%, rgba(255,0,0,1) 100%);
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.5s;
+}
+
+.form-container .btn:hover {
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,255,0,1) 100%);
+}
+
+.form-container p {
+    color: #aaa;
+    text-align: center;
+}
+
+.form-container a {
+    color: #0f0;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+.form-container .file {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: linear-gradient(90deg, rgba(0,255,0,1) 0%, rgba(255,0,0,1) 100%);
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.5s;
+}
+
+.form-container .file:hover {
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,255,0,1) 100%);
+}
+
+.custom-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.dialog-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dialog-content p {
+    margin: 0 0 20px 0;
+}
+
+.dialog-content button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dialog-content button:hover {
+    background-color: #0056b3;
+}
+/* Style for select dropdown */
+select.box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* Adjust as needed */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #222;
+    outline: none;
+    font-size: 16px;
+    color: #0f0;
+}
+
+/* Style for file input */
+input[type="file"].box {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 10px;
+    background-color: #222;
+    margin-bottom: 20px; /* Adjust as needed */
+    width: calc(100% - 1px); /* Adjusts width accounting for padding and border */
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+}
+
+/* Change the appearance of file input to look more like a button */
+input[type="file"].box::file-selector-button {
+    padding: 10px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Adjust the file input text to not overlap with the button */
+input[type="file"].box::file-selector-button + ::file-selector-text {
+    margin-left: 10px;
+}

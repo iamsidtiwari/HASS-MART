@@ -1,0 +1,1174 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root{
+   --green:#33cc34;
+   --orange:#f39c12;
+   --red:#e74c3c;
+   --black:#333;
+   --light-color:#666;
+   --white:#fff;
+   --light-bg:#f6f6f6;
+   --border:.2rem solid var(--black);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Rubik', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   color:var(--black);
+}
+
+*::selection{
+   background-color: var(--green);
+   color:var(--white);
+}
+
+*::-webkit-scrollbar{
+   height: .5rem;
+   width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color: var(--green);
+}
+
+body {
+   font-family: 'Press Start 2P', cursive;
+   background-color: wheat;
+   color: #fff;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 6.5rem;
+}
+
+section{
+   padding:3rem 2rem;
+   max-width: 1200px;
+   margin:0 auto;
+}
+
+.disabled{
+   user-select: none;
+   pointer-events: none;
+   opacity: .5;
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+   display: block;
+   width: 100%;
+   margin-top: 1rem;
+   border-radius: .5rem;
+   color:var(--white);
+   font-size: 2rem;
+   padding:1.3rem 3rem;
+   text-transform: capitalize;
+   cursor: pointer;
+   text-align: center;
+}
+
+.btn{
+   background-color: var(--green);
+}
+
+.delete-btn{
+   background-color: var(--red);
+}
+
+.option-btn{
+   background-color: var(--orange);
+}
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover{
+   background-color: var(--black);
+}
+
+.flex-btn{
+   display: flex;
+   flex-wrap: wrap;
+   gap:1rem;
+}
+
+.flex-btn > *{
+   flex:1;
+}
+
+.title{
+   text-align: center;
+   margin-bottom: 2rem;
+   text-transform: uppercase;
+   color:var(--black);
+   font-size: 3.5rem;
+}
+
+.message{
+   position: sticky;
+   top:0;
+   max-width: 1200px;
+   margin:0 auto;
+   background-color: var(--light-bg);
+   padding:2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:1.5rem;
+   z-index: 10000;
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   font-size: 2.5rem;
+   cursor: pointer;
+   color:var(--red);
+}
+
+.message i:hover{
+   color:var(--black);
+}
+
+.empty{
+   padding:1.5rem;
+   background: var(--white);
+   color:var(--red);
+   border-radius: .5rem;
+   border:var(--border);
+   font-size: 2rem;
+   text-align: center;
+   box-shadow: var(--box-shadow);
+   text-transform: capitalize;
+}
+
+@keyframes fadeIn {
+   0%{
+      transform: translateY(1rem);
+   }
+}
+
+.form-container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.form-container form{
+   width: 50rem;
+   background-color: var(--white);
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   border:var(--border);
+   text-align: center;
+   padding:2rem;
+}
+
+.form-container form h3{
+   font-size: 3rem;
+   color:var(--black);
+   margin-bottom: 1rem;
+   text-transform: uppercase;
+}
+
+.form-container form .box{
+   width: 100%;
+   margin:1rem 0;
+   border-radius: .5rem;
+   border:var(--border);
+   padding:1.2rem 1.4rem;
+   font-size: 1.8rem;
+   color:var(--black);
+   background-color: var(--light-bg);
+}
+
+.form-container form p{
+   margin-top: 2rem;
+   font-size: 2.2rem;
+   color:var(--light-color);
+}
+
+.form-container form p a{
+   color:var(--green);
+}
+
+.form-container form p a:hover{
+   text-decoration: underline;
+}
+
+.header{
+   background: var(--white);
+   position: sticky;
+   top:0; left:0; right:0;
+   z-index: 1000;
+   box-shadow: var(--box-shadow);
+}
+
+.header .flex{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding:2rem;
+   margin: 0 auto;
+   max-width: 1200px;
+   position: relative;
+}
+
+.header .flex .logo{
+   font-size: 2.5rem;
+   color:var(--black);
+}
+
+.header .flex .logo span{
+   color:var(--green);
+}
+
+.header .flex .navbar a{
+   margin:0 1rem;
+   font-size: 2rem;
+   color:var(--light-color);
+}
+
+.header .flex .navbar a:hover{
+   text-decoration: underline;
+   color:var(--green);
+}
+
+.header .flex .icons > *{
+   font-size: 2.5rem;
+   color:var(--light-color);
+   cursor: pointer;
+   margin-left: 1.5rem;
+}
+
+.header .flex .icons > *:hover{
+   color:var(--green);
+}
+
+.header .flex .icons a span,
+.header .flex .icons a i{
+   color:var(--light-color);
+}
+
+.header .flex .icons a:hover span,
+.header .flex .icons a:hover i{
+   color:var(--green);
+}
+
+.header .flex .icons a span{
+   font-size: 2rem;
+}
+
+#menu-btn{
+   display: none;
+}
+
+.header .flex .profile{
+   position: absolute;
+   top:120%; right:2rem;
+   box-shadow: var(--box-shadow);
+   border:var(--border);
+   border-radius: .5rem;
+   padding:2rem;
+   text-align: center;
+   background-color: var(--white);
+   width: 33rem;
+   display: none;
+   animation: fadeIn .2s linear;
+}
+
+.header .flex .profile.active{
+   display: inline-block;
+}
+
+.header .flex .profile img{
+   height: 15rem;
+   width: 15rem;
+   margin-bottom: 1rem;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+.header .flex .profile p{
+   padding:.5rem 0;
+   font-size: 2rem;
+   color:var(--light-color);
+}
+
+.update-profile form{
+   max-width: 70rem;
+   margin: 0 auto;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border:var(--border);
+   border-radius: .5rem;
+   padding:2rem;
+   text-align: center;
+}
+
+.update-profile form .flex{
+   display: flex;
+   gap:1.5rem;
+   justify-content: space-between;
+}
+
+.update-profile form img{
+   height: 20rem;
+   width: 20rem;
+   margin-bottom: 1rem;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+.update-profile form .inputBox{
+   text-align: left;
+   width: 49%;
+}
+
+.update-profile form .inputBox span{
+   display: block;
+   padding-top: 1rem;
+   font-size: 1.8rem;
+   color:var(--light-color);
+}
+
+.update-profile form .inputBox .box{
+   width: 100%;
+   padding:1.2rem 1.4rem;
+   font-size: 1.8rem;
+   color:var(--black);
+   border:var(--border);
+   border-radius: .5rem;
+   margin:1rem 0;
+   background-color: var(--light-bg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+   background-color: var(--white);
+}
+
+.footer .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+   gap:2.5rem;
+   align-items: flex-start;
+}
+
+.footer .box-container .box h3{
+   text-transform: uppercase;
+   color:var(--black);
+   margin-bottom: 2rem;
+   font-size: 2rem;
+}
+
+.footer .box-container .box a,
+.footer .box-container .box p{
+   display: block;
+   padding:1.3rem 0;
+   font-size: 1.6rem;
+   color:var(--light-color);
+}
+
+.footer .box-container .box a i,
+.footer .box-container .box p i{
+   color:var(--green);
+   padding-right: 1rem;
+}
+
+.footer .box-container .box a:hover{
+   text-decoration: underline;
+   color:var(--green);
+}
+
+.footer .credit{
+   margin-top: 2rem;
+   padding: 2rem 1.5rem;
+   padding-bottom: 2.5rem;
+   line-height: 1.5;
+   border-top: var(--border);
+   text-align: center;
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.footer .credit span{
+   color:var(--green);
+}
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+   
+}
+
+@media (max-width:768px){
+
+   #menu-btn{
+      display: inline-block;
+   }
+
+   .header .flex .navbar{
+      border-top: var(--border);
+      border-bottom: var(--border);
+      background-color: var(--white);
+      position: absolute;
+      top:99%; left:0; right:0;
+      transition: .2s linear;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   .header .flex .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .flex .navbar a{
+      display: block;
+      margin:2rem;   
+   }
+
+   .update-profile form .flex{
+      flex-wrap: wrap;
+      gap:0;
+   }
+
+   .update-profile form .flex .inputBox{
+      width: 100%;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .flex-btn{
+      flex-flow: column;
+      gap:0;
+   }
+
+   .title{
+      font-size: 3rem;
+   }
+   
+}
+
+
+/* Background and Home Section */
+.home-bg {
+   background-image: url('home-bg.jpg');
+   background-size: cover;
+   background-position: center;
+}
+
+.home .content span {
+   color: #ffcc00;
+   font-size: 24px;
+}
+
+.home .content h3 {
+   color: #ffcc00;
+   margin: 10px 0;
+}
+
+.home .content p {
+   color: #fff;
+   margin-bottom: 20px;
+}
+
+.home .content .btn {
+   display: inline-block;
+   background: #ffcc00;
+   color: #000;
+   padding: 10px 30px;
+   text-decoration: none;
+   border-radius: 5px;
+   font-size: 18px;
+   transition: background-color 0.3s;
+}
+
+.home .content .btn:hover {
+   background-color: #ffb300;
+}
+
+/* Category Section */
+.home-category .title, .products .title {
+   text-align: center;
+   margin: 20px 0;
+   font-size: 32px;
+   color: #ffcc00;
+   text-transform: uppercase;
+}
+.home-category{
+   background-color: rgb(23, 22, 22);
+}
+.box-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: center;
+   padding: 20px;
+}
+
+.box {
+   border-radius: 25px;
+   border-color: #ff0000;
+   border-width: 4.5px;
+   border-style:ridge;
+   padding: 20px;
+   width: calc(18% - 10px); /* Adjust based on your layout */
+   text-align: center;
+   background-color: rgba(255, 255, 255, 0.1);
+   transition: border-color 0.3s;
+}
+
+.box:hover {
+   border-color: #ffb300;
+}
+
+.box img {
+   max-width: 100%;
+   height: auto;
+   margin-bottom: 10px;
+}
+
+.box h3 {
+   margin-bottom: 10px;
+   font-size: 24px;
+}
+
+.box p {
+   margin-bottom: 20px;
+   color: #ddd;
+}
+
+.box .btn {
+   display: block;
+   width: 100%;
+   margin-top: 1rem;
+   border-radius: .5rem;
+   color:var(--white);
+   font-size: 2rem;
+   padding:1.3rem 3rem;
+   text-transform: capitalize;
+   cursor: pointer;
+   text-align: center;
+   background-color: var(--green);
+}
+
+.box .btn:hover {
+   background-color:rgb(118, 244, 244);
+}
+
+.option-btn {
+   background: #ff0000;
+   color: #fff;
+   margin-top: 10px;
+   padding: 10px 20px;
+   display: inline-block;
+   border-radius: 5px;
+   font-size: 18px;
+   transition: background-color 0.3s;
+}
+
+.option-btn:hover {
+   background-color: #ff3333;
+}
+
+/* Products Section */
+.products .box {
+   position: relative;
+}
+
+.products .price {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background: #17a2b8;
+   color: white;
+   padding: 5px 10px;
+   border-radius: 5px;
+}
+
+.qty {
+   width: 50px;
+   padding: 5px;
+   margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+   .box {
+       width: calc(50% - 20px); /* Adjust for smaller screens */
+   }
+}
+
+@media (max-width: 768px) {
+   .box {
+       width: calc(100% - 20px); /* Full width on very small screens */
+   }
+}
+
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+   width: 5px;
+}
+
+::-webkit-scrollbar-track {
+   background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+   background: #4CAF50;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #e63946;
+}
+
+
+/* product images*/
+/* Product Box */
+
+.products .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 35rem);
+  gap:1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.products .box-container .box{
+  padding:2rem;
+  text-align: center;
+  border:var(--border);
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  border-radius: .5rem;
+  position: relative;
+}
+
+.products .box-container .box .price{
+  position: absolute;
+  top:1rem; left:1rem;
+  padding:1rem;
+  border-radius: .5rem;
+  background-color: var(--red);
+  font-size: 1.8rem;
+  color:var(--white);
+}
+
+.products .box-container .box .price span{
+  font-size: 2.5rem;
+  color:var(--white);
+  margin:0 .2rem;
+}
+
+.products .box-container .box .fa-eye{
+  position: absolute;
+  top:1rem; right:1rem;
+  border-radius: .5rem;
+  height: 4.5rem;
+  line-height: 4.3rem;
+  width: 5rem;
+  border:var(--border);
+  color:var(--black);
+  font-size: 2rem;
+  background-color: var(--white);
+}
+
+.products .box-container .box .fa-eye:hover{
+  color:var(--white);
+  background-color: var(--black);
+}
+
+.products .box-container .box img{
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.products .box-container .box .name{
+  font-size: 2rem;
+  color:var(--black);
+  padding:1rem 0;
+}
+
+.products .box-container .box .qty{
+  margin:.5rem 0;
+  border-radius: .5rem;
+  padding:1.2rem 1.4rem;
+  font-size: 1.8rem;
+  color:var(--black);
+  border:var(--border);
+  width: 100%;
+}
+
+/*  electronic products */
+/* Electronic Products Section */
+/* Electronic Products Section */
+.electronic-products {
+   background-color: rgb(233, 223, 223);
+   padding: 10px 0;
+   text-align: left;
+}
+
+.electronic-products .title {
+   font-size: 36px;
+   color: black;
+   margin-bottom: 20px;
+}
+
+.electronic-products .pbox-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.electronic-products .pbox {
+   position: relative;
+   border-radius: 2px;
+   border: 2px solid #0a0b0e; /* Blue border color */
+   width: 220px;
+   height: 240px;
+   margin: 10px;
+   text-align: center;
+   background-color: white; /* Light gray background color */
+   transition: box-shadow 0.3s;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.electronic-products .pbox:hover {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #db3495; /* Glow effect on hover */
+}
+
+.electronic-products .pbox img {
+   max-width: 70%; /* Set max-width to 40% */
+   height: auto;
+   border-radius: 8px;
+   margin: 0 auto; /* Center the image horizontally */
+}
+
+.electronic-products .pbox .name {
+   font-size: 17px; /* Adjusted font size */
+   color: black; /* Dark gray text color */
+   padding: 3px;
+   margin-bottom: 5px; /* Add margin to improve visibility */
+}
+
+.electronic-products .pbox .price {
+   background: #e74c3c; /* Red background color for price */
+   color: white;
+   padding: 5px;
+   border-radius: 5px;
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   font-size: 12px; /* Adjusted font size */
+}
+
+.electronic-products .pbox .btn-container {
+   display: flex;
+   justify-content: space-between;
+   padding: 5px;
+}
+
+.electronic-products .pbox .btn, .electronic-products .pbox .option-btn {
+   background: #33cc33; /* Red button color for "Add to Wishlist" */
+   color: white; /* White text color */
+   text-decoration: none;
+   padding: 8px 16px;
+   display: inline-block;
+   border-radius: 3px;
+   font-size: 10px;
+   font-weight: bold; /* Adjusted font size */
+   margin: 5px; /* Add minimal gap between buttons */
+   transition: background-color 0.3s;
+}
+.electronic-products .pbox .option-btn {
+   background:  rgb(255, 171, 3);  /* Red button color for "Add to Wishlist" */
+   color: white; /* White text color */
+   text-decoration: none;
+   padding: 8px 16px;
+   display: inline-block;
+   border-radius: 3px;
+   font-size: 10px; /* Adjusted font size */
+   margin: 5px; /* Add minimal gap between buttons */
+   transition: background-color 0.3s;
+   font-weight: bold
+}
+
+.electronic-products .pbox .btn:hover, .electronic-products .pbox .option-btn:hover {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #18a01c; /* Glow effect on hover */
+   color: white; /* White text color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+   .electronic-products .pbox {
+       width: calc(50% - 20px);
+       height: 200px; /* Adjusted height for smaller screens */
+   }
+}
+
+
+/*  grocery products */
+/* grocery Products Section */
+/* grocery Products Section */
+.grocery-products {
+   background-color: rgb(245, 236, 236);
+   padding: 10px 0;
+   text-align: left;
+}
+
+.grocery-products .title {
+   font-size: 36px;
+   color: black;
+   margin-bottom: 20px;
+}
+
+.grocery-products .pbox-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.grocery-products .pbox {
+   position: relative;
+   border-radius: 2px;
+   border: 2px solid #0a0b0e; /* Blue border color */
+   width: 220px;
+   height: 240px;
+   margin: 10px;
+   text-align: center;
+   background-color: white; /* Light gray background color */
+   transition: box-shadow 0.3s;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.grocery-products .pbox:hover {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #db3495; /* Glow effect on hover */
+}
+
+.grocery-products .pbox img {
+   max-width: 70%; /* Set max-width to 40% */
+   height: auto;
+   border-radius: 8px;
+   margin: 0 auto; /* Center the image horizontally */
+}
+
+.grocery-products .pbox .name {
+   font-size: 17px; /* Adjusted font size */
+   color: black; /* Dark gray text color */
+   padding: 3px;
+   margin-bottom: 5px; /* Add margin to improve visibility */
+}
+
+.grocery-products .pbox .price {
+   background: #e74c3c; /* Red background color for price */
+   color: white;
+   padding: 5px;
+   border-radius: 5px;
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   font-size: 12px; /* Adjusted font size */
+}
+
+.grocery-products .pbox .btn-container {
+   display: flex;
+   justify-content: space-between;
+   padding: 5px;
+}
+
+.grocery-products .pbox .btn, .grocery-products .pbox .option-btn {
+   background: #33cc33; /* Red button color for "Add to Wishlist" */
+   color: white; /* White text color */
+   text-decoration: none;
+   padding: 8px 16px;
+   display: inline-block;
+   border-radius: 3px;
+   font-size: 10px;
+   font-weight: bold; /* Adjusted font size */
+   margin: 5px; /* Add minimal gap between buttons */
+   transition: background-color 0.3s;
+}
+.grocery-products .pbox .option-btn {
+   background:  rgb(255, 171, 3);  /* Red button color for "Add to Wishlist" */
+   color: white; /* White text color */
+   text-decoration: none;
+   padding: 8px 16px;
+   display: inline-block;
+   border-radius: 3px;
+   font-size: 10px; /* Adjusted font size */
+   margin: 5px; /* Add minimal gap between buttons */
+   transition: background-color 0.3s;
+   font-weight: bold
+}
+
+.grocery-products .pbox .btn:hover, .grocery-products .pbox .option-btn:hover {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #18a01c; /* Glow effect on hover */
+   color: white; /* White text color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+   .grocery-products .pbox {
+       width: calc(50% - 20px);
+       height: 200px; /* Adjusted height for smaller screens */
+   }
+}
+/*  grocery products */
+/* grocery Products Section */
+/* grocery Products Section */
+.grocery-products {
+   background-color: rgb(245, 236, 236);
+   padding: 10px 0;
+   text-align: left;
+}
+
+.grocery-products .title {
+   font-size: 36px;
+   color: black;
+   margin-bottom: 20px;
+}
+
+.grocery-products .pbox-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.grocery-products .pbox {
+   position: relative;
+   border-radius: 2px;
+   border: 2px solid #0a0b0e; /* Blue border color */
+   width: 220px;
+   height: 240px;
+   margin: 10px;
+   text-align: center;
+   background-color: white; /* Light gray background color */
+   transition: box-shadow 0.3s;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.grocery-products .pbox:hover {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #db3495; /* Glow effect on hover */
+}
+
+.grocery-products .pbox img {
+   max-width: 70%; /* Set max-width to 40% */
+   height: auto;
+   border-radius: 8px;
+   margin: 0 auto; /* Center the image horizontally */
+}
+
+.grocery-products .pbox .name {
+   font-size: 17px; /* Adjusted font size */
+   color: black; /* Dark gray text color */
+   padding: 3px;
+   margin-bottom: 5px; /* Add margin to improve visibility */
+}
+
+.grocery-products .pbox .price {
+   background: #e74c3c; /* Red background color for price */
+   color: white;
+   padding: 5px;
+   border-radius: 5px;
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   font-size: 12px; /* Adjusted font size */
+}
+
+.grocery-products .pbox .btn-container {
+   display: flex;
+   justify-content: space-between;
+   padding: 5px;
+}
+
+.grocery-products .pbox .btn, .grocery-products .pbox .option-btn {
+   background: #33cc33; /* Red button color for "Add to Wishlist" */
+   color: white; /* White text color */
+   text-decoration: none;
+   padding: 8px 16px;
+   display: inline-block;
+   border-radius: 3px;
+   font-size: 10px;
+   font-weight: bold; /* Adjusted font size */
+   margin: 5px; /* Add minimal gap between buttons */
+   transition: background-color 0.3s;
+}
+.grocery-products .pbox .option-btn {
+   background:  rgb(255, 171, 3);  /* Red button color for "Add to Wishlist" */
+   color: white; /* White text color */
+   text-decoration: none;
+   padding: 8px 16px;
+   display: inline-block;
+   border-radius: 3px;
+   font-size: 10px; /* Adjusted font size */
+   margin: 5px; /* Add minimal gap between buttons */
+   transition: background-color 0.3s;
+   font-weight: bold
+}
+
+.grocery-products .pbox .btn:hover, .grocery-products .pbox .option-btn:hover {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #18a01c; /* Glow effect on hover */
+   color: white; /* White text color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+   .grocery-products .pbox {
+       width: calc(50% - 20px);
+       height: 200px; /* Adjusted height for smaller screens */
+   }
+}
+/*  clothing products */
+/* clothing Products Section */
+/* clothing Products Section */
+.clothing-products {
+   background-color: rgb(245, 236, 236);
+   padding: 10px 0;
+   text-align: left;
+}
+
+.clothing-products .title {
+   font-size: 36px;
+   color: black;
+   margin-bottom: 20px;
+}
+
+.clothing-products .pbox-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.clothing-products .pbox {
+   position: relative;
+   border-radius: 2px;
+   border: 2px solid #0a0b0e; /* Blue border color */
+   width: 220px;
+   height: 240px;
+   margin: 10px;
+   text-align: center;
+   background-color: white; /* Light gray background color */
+   transition: box-shadow 0.3s;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.clothing-products .pbox:hover {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #db3495; /* Glow effect on hover */
+}
+
+.clothing-products .pbox img {
+   max-width: 70%; /* Set max-width to 40% */
+   height: auto;
+   border-radius: 8px;
+   margin: 0 auto; /* Center the image horizontally */
+}
+
+.clothing-products .pbox .name {
+   font-size: 17px; /* Adjusted font size */
+   color: black; /* Dark gray text color */
+   padding: 3px;
+   margin-bottom: 5px; /* Add margin to improve visibility */
+}
+
+.clothing-products .pbox .price {
+   background: #e74c3c; /* Red background color for price */
+   color: white;
+   padding: 5px;
+   border-radius: 5px;
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   font-size: 12px; /* Adjusted font size */
+}
+
+.clothing-products .pbox .btn-container {
+   display: flex;
+   justify-content: space-between;
+   padding: 5px;
+}
+
+.clothing-products .pbox .btn, .clothing-products .pbox .option-btn {
+   background: #33cc33; /* Red button color for "Add to Wishlist" */
+   color: white; /* White text color */
+   text-decoration: none;
+   padding: 8px 16px;
+   display: inline-block;
+   border-radius: 3px;
+   font-size: 10px;
+   font-weight: bold; /* Adjusted font size */
+   margin: 5px; /* Add minimal gap between buttons */
+   transition: background-color 0.3s;
+}
+.clothing-products .pbox .option-btn {
+   background:  rgb(255, 171, 3);  /* Red button color for "Add to Wishlist" */
+   color: white; /* White text color */
+   text-decoration: none;
+   padding: 8px 16px;
+   display: inline-block;
+   border-radius: 3px;
+   font-size: 10px; /* Adjusted font size */
+   margin: 5px; /* Add minimal gap between buttons */
+   transition: background-color 0.3s;
+   font-weight: bold
+}
+
+.clothing-products .pbox .btn:hover, .clothing-products .pbox .option-btn:hover {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #18a01c; /* Glow effect on hover */
+   color: white; /* White text color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+   .clothing-products .pbox {
+       width: calc(50% - 20px);
+       height: 200px; /* Adjusted height for smaller screens */
+   }
+}

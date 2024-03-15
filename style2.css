@@ -1,0 +1,428 @@
+/*header  */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root{
+   --green:rgb(8, 0, 255);
+   --orange:#f39c12;
+   --red:#e74c3c;
+   --black:#333;
+   --light-color:#666;
+   --white:#fff;
+   --light-bg:#f6f6f6;
+   --border:.2rem solid var(--black);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Rubik', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   color:var(--black);
+}
+
+.header{
+    background: var(--white);
+    position: sticky;
+    top:0; left:0; right:0;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+ }
+ 
+ .header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+ }
+ 
+ .header .flex .logo{
+    font-size: 2.5rem;
+    color:var(--black);
+ }
+ 
+ .header .flex .logo span{
+    color:var(--green);
+ }
+ 
+ .header .flex .navbar a{
+    margin:0 1rem;
+    font-size: 2rem;
+    color:var(--light-color);
+ }
+ 
+ .header .flex .navbar a:hover{
+    text-decoration: underline;
+    color:var(--green);
+ }
+ 
+ .header .flex .icons > *{
+    font-size: 2.5rem;
+    color:var(--light-color);
+    cursor: pointer;
+    margin-left: 1.5rem;
+ }
+ 
+ .header .flex .icons > *:hover{
+    color:var(--green);
+ }
+ 
+ .header .flex .icons a span,
+ .header .flex .icons a i{
+    color:var(--light-color);
+ }
+ 
+ .header .flex .icons a:hover span,
+ .header .flex .icons a:hover i{
+    color:var(--green);
+ }
+ 
+ .header .flex .icons a span{
+    font-size: 2rem;
+ }
+ 
+ #menu-btn{
+    display: none;
+ }
+ 
+ .header .flex .profile{
+    position: absolute;
+    top:120%; right:2rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+    padding:2rem;
+    text-align: center;
+    background-color: var(--white);
+    width: 33rem;
+    display: none;
+    animation: fadeIn .2s linear;
+ }
+ 
+ .header .flex .profile.active{
+    display: inline-block;
+ }
+ 
+ .header .flex .profile img{
+    height: 15rem;
+    width: 15rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+ }
+ 
+ .header .flex .profile p{
+    padding:.5rem 0;
+    font-size: 2rem;
+    color:var(--light-color);
+ }
+ 
+ .update-profile form{
+    max-width: 70rem;
+    margin: 0 auto;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+    padding:2rem;
+    text-align: center;
+ }
+ 
+ .update-profile form .flex{
+    display: flex;
+    gap:1.5rem;
+    justify-content: space-between;
+ }
+ 
+ .update-profile form img{
+    height: 20rem;
+    width: 20rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+ }
+ 
+ .update-profile form .inputBox{
+    text-align: left;
+    width: 49%;
+ }
+ 
+ .update-profile form .inputBox span{
+    display: block;
+    padding-top: 1rem;
+    font-size: 1.8rem;
+    color:var(--light-color);
+ }
+ 
+ .update-profile form .inputBox .box{
+    width: 100%;
+    padding:1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color:var(--black);
+    border:var(--border);
+    border-radius: .5rem;
+    margin:1rem 0;
+    background-color: var(--light-bg);
+ }
+ 
+ 
+
+/* Background and Home Section */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #0a0b0e;
+    color: #fff;
+}
+.home-bg {
+    background-image: url('home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.home .content span {
+    color: #ffcc00;
+    font-size: 24px;
+}
+
+.home .content h3 {
+    color: #ffcc00;
+    margin: 10px 0;
+}
+
+.home .content p {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.home .content .btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #000;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.home .content .btn:hover {
+    background-color: #ffb300;
+}
+
+/* Category Section */
+.home-category .title, .products .title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 32px;
+    color: #ffcc00;
+    text-transform: uppercase;
+}
+.home-category{
+    background-color: rgb(23, 22, 22);
+}
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.box {
+    border-radius: 25px;
+    border-color: #ff0000;
+    border-width: 4.5px;
+    border-style:ridge;
+    padding: 20px;
+    width: calc(18% - 10px); /* Adjust based on your layout */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s;
+}
+
+.box:hover {
+    border-color: #ffb300;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.box h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.box p {
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.box .btn {
+    background: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    border-color: #ff0000;
+    border-width: 4.5px;
+}
+
+.box .btn:hover {
+    background-color:rgb(118, 244, 244);
+}
+
+.option-btn {
+    background: #ff0000;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.option-btn:hover {
+    background-color: #ff3333;
+}
+
+/* Products Section */
+.products .box {
+    position: relative;
+}
+
+.products .price {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #17a2b8;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.qty {
+    width: 50px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .box {
+        width: calc(50% - 20px); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: calc(100% - 20px); /* Full width on very small screens */
+    }
+}
+
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4CAF50;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e63946;
+}
+
+
+/* product images*/
+/* Product Box */
+
+.products .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 35rem);
+   gap:1.5rem;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.products .box-container .box{
+   padding:2rem;
+   text-align: center;
+   border:var(--border);
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+   position: relative;
+}
+
+.products .box-container .box .price{
+   position: absolute;
+   top:1rem; left:1rem;
+   padding:1rem;
+   border-radius: .5rem;
+   background-color: var(--red);
+   font-size: 1.8rem;
+   color:var(--white);
+}
+
+.products .box-container .box .price span{
+   font-size: 2.5rem;
+   color:var(--white);
+   margin:0 .2rem;
+}
+
+.products .box-container .box .fa-eye{
+   position: absolute;
+   top:1rem; right:1rem;
+   border-radius: .5rem;
+   height: 4.5rem;
+   line-height: 4.3rem;
+   width: 5rem;
+   border:var(--border);
+   color:var(--black);
+   font-size: 2rem;
+   background-color: var(--white);
+}
+
+.products .box-container .box .fa-eye:hover{
+   color:var(--white);
+   background-color: var(--black);
+}
+
+.products .box-container .box img{
+   width: 100%;
+   margin-bottom: 1rem;
+}
+
+.products .box-container .box .name{
+   font-size: 2rem;
+   color:var(--black);
+   padding:1rem 0;
+}
+
+.products .box-container .box .qty{
+   margin:.5rem 0;
+   border-radius: .5rem;
+   padding:1.2rem 1.4rem;
+   font-size: 1.8rem;
+   color:var(--black);
+   border:var(--border);
+   width: 100%;
+}
+ 

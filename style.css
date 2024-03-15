@@ -1,0 +1,2316 @@
+/* General Resets */
+/* home screen*/
+:root{
+    --green:#33cc35;
+    --orange:#f39c12;
+    --red:#e74c3c;
+    --black:#333;
+    --light-color:#666;
+    --white:#fff;
+    --light-bg:#000000;
+    --border:.2rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+ }
+ *{
+    font-family: 'Rubik', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+ }
+ 
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+ }
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #0a0b0e;
+}
+
+
+/* Background and Home Section */
+.home-bg {
+    background-image: url('home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.home .content span {
+    color: #33dd33;
+    font-size: 24px;
+}
+
+.home .content h3 {
+    color: #ffcc00;
+    margin: 10px 0;
+}
+
+.home .content p {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.home .content .btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #000;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.home .content .btn:hover {
+    background-color: #33cc39;
+}
+
+/* Category Section */
+.home-category .title, .products .title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 32px;
+    color: #ffcc00;
+    text-transform: uppercase;
+    margin-top: none;
+}
+.home-category{
+    background-color: rgb(23, 22, 22);
+}
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    background-color: #1e1e1e;
+    border-width: 1px;
+    border-color: #18a01c;
+    border-style: solid;
+}
+/*
+.box {
+    border-radius: 4.5px;
+    border-color: #ffcc00;
+    border-width: 2.4px;
+    border-style: solid;
+    padding: 2vw; 
+    width: calc(18% - 10px); 
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-right: 1vw;
+    margin-left: 1vw;
+    transition: border-color 0.3s;
+}*/
+
+.box:hover {
+    border-color: #0c0;
+}
+
+.box img {
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.box h3 {
+    margin-bottom: 10px;
+    font-size: 1.25vw; /* Adjust font size based on viewport width */
+    color: #0f0;
+}
+
+.box p {
+    margin-bottom: 20px;
+    color: #f6f6f6;
+    font-size: 1vw; /* Adjust font size based on viewport width */
+}
+
+.box .btn, .option-btn, .opt-btn {
+    background: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    padding: 0.5vw 1vw; /* Adjust padding based on viewport width */
+    display: inline-block;
+    border-radius: 11px;
+    font-size: 1.25vw; /* Adjust font size based on viewport width */
+    transition: background-color 0.3s, transform 0.3s;
+    border: 0px solid;
+    border-color: none;
+}
+
+.box .btn:hover, .option-btn:hover, .opt-btn:hover {
+    background-color: rgb(118, 244, 244);
+    transform: scale(1.05); /* Slightly increase size on hover for better interaction feedback */
+}
+
+/* Basic responsiveness for very small screens */
+@media (max-width: 480px) {
+    .box, .box .btn, .option-btn, .opt-btn {
+        width: auto; /* Allow box to fill available space */
+        margin: 10px; /* Adjust margins for small screens */
+        padding: 3% 3%; /* Adjust padding */
+        font-size: 5vw; /* Increase font size for readability */
+    }
+    
+    .box h3, .box p {
+        font-size: 4vw; /* Adjust heading and paragraph font size for small screens */
+    }
+}
+
+/*home category*/
+
+/* Category Section */
+.home-category{
+    background-color: rgb(40, 35, 35);
+}
+.home-category .title, .products .title {
+    text-align: center;
+    margin:0 ;
+    font-size: 32px;
+    color: #ffcc00;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #ffcc00;
+    margin-bottom: 5px;
+}
+
+
+.cbox-container {
+    display: grid;
+    /* This will create a grid layout that fits 5 boxes in a row on larger screens */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 11px; /* Adjust the gap to ensure boxes are closer together */
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cbox-container .cbox {
+    width: 240px;
+    height: 230px;
+    padding: 1.2rem; /* Adjust based on content needs */
+    text-align: center;
+    border: 2px solid #0c0;
+    background-color: var(--white);
+    border-radius: 50%; /* This makes it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px auto; /* Center the box if it's not already */
+}
+
+.cbox-container .cbox:hover{
+    box-shadow: 0 0 20px #0c0;
+}
+.cbox-container .cbox img{
+    max-width: 80%; /* Adjust this value as needed */
+    height: 60%; /* Adjust spacing around images/buttons */
+}
+
+
+.cbox-container .cbox p {
+    margin-bottom: 20px;
+    color: white;
+}
+
+cbox-container .cbox .btn {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cbox-container .cbox .btn:hover {
+    background-color: #0c0;
+    border-radius: 29px;
+}
+
+/* Products Section */
+.products .box {
+    position: relative;
+}
+
+.products .price {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #17a2b8;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.qty {
+    width: 50px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 2px;
+    border-width: 3px;
+    border-style:groove;
+    border-color: yellowgreen;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .box {
+        width: calc(50% - 20px); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: calc(100% - 20px); /* Full width on very small screens */
+    }
+}
+
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4CAF50;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e63946;
+}
+
+
+/* product images*/
+
+.products {
+    background-color: rgb(233, 223, 223);
+    padding: 10px 0;
+    text-align: left;
+}
+
+.products .title {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.products .pbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.products .pbox {
+    position: relative;
+    border-radius: 2px;
+    border: 2px solid #0a0b0e; /* Blue border color */
+    width: 220px;
+    height: 260px;
+    margin: 10px;
+    text-align: center;
+    background-color: white; /* Light gray background color */
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.products .pbox:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3), 0 0 10px #a231d2; /* Glow effect on hover */
+}
+
+.products .pbox img {
+    max-width: 70%; /* Set max-width to 40% */
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.products .pbox .name {
+    font-size: 17px; /* Adjusted font size */
+    color: black; /* Dark gray text color */
+    padding: 3px;
+    margin-bottom: 5px; /* Add margin to improve visibility */
+}
+
+
+.products .pbox .price {
+    background: #e74c3c; /* Red background color for price */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px; /* Adjusted font size */
+}
+
+.products .pbox .btn-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.products .pbox .btn, .products .pbox .option-btn {
+    background: #33cc33; /* Red button color for "Add to Wishlist" */
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold; /* Adjusted font size */
+    margin: 5px; /* Add minimal gap between buttons */
+    transition: background-color 0.3s;
+}
+.products .pbox .option-btn {
+    background:rgb(255, 42, 42);  /* Red button color for "Add to Wishlist" */
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 10px; /* Adjusted font size */
+    margin: 5px; /* Add minimal gap between buttons */
+    transition: background-color 0.3s;
+    font-weight: bold
+}
+
+.products .pbox .btn:hover, .products .pbox .option-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #18a01c; /* Glow effect on hover */
+    color: white; /* White text color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .products .pbox {
+        width: calc(50% - 20px);
+        height: 200px; /* Adjusted height for smaller screens */
+    }
+}
+/* Product Box */
+
+/*header*/
+
+/* General Styles */
+/* new home */
+/* style.css */
+
+
+
+header{
+    background:#000;
+    position: sticky;
+    top:0; left:0; right:0;
+    z-index: 1000;
+    box-shadow: #0000;
+ }
+ 
+ .header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem;
+    margin: 0 auto;
+    max-width: 1400px;
+    position: relative;
+ }
+
+.header .flex .logo {
+    color: #3ce34d;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 30px;
+}
+.header .flex .logo:hover {
+    color: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #db3495;
+    
+}
+
+
+.header .flex .icons > *{
+    font-size: 1.2rem;
+    color:white;
+    cursor: pointer;
+    margin-left: 1.5rem;
+ }
+ 
+ .header .flex .icons > *:hover{
+    color:#33cc33;
+ }
+ 
+ 
+ .header .flex .icons a:hover span,
+ .header .flex .icons a:hover i{
+    color:#33cc39;
+ }
+ 
+ .header .flex .icons a span{
+    font-size: 1.1rem;
+    font-weight: bold;
+ }
+ .header .flex .navbar a:hover{
+    color: #0c0;
+ }
+ 
+ #menu-btn{
+    display: none;
+ }
+ .header .flex .profile{
+    position: absolute;
+    top:100%; right:2rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+    padding:2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.796);
+    width: 20rem;
+    display: none;
+    animation: fadeIn .2s linear;
+    border:2.7px solid rgb(4, 254, 4);
+ }
+ 
+ .header .flex .profile.active{
+    display: inline-block;
+ }
+
+
+ .header .flex .profile img{
+    height: 10rem;
+    width: 10rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border:2.7px solid rgb(4, 254, 4);
+ }
+ .header .flex .profile img:hover{
+    box-shadow: 0 0 20px #0c0; 
+ }
+ 
+ .header .flex .profile p{
+    padding:.3rem 0;
+    font-size: 2rem;
+    color:#0f0;
+ }
+
+
+ .header .flex .opt-btn {
+    background-color: #f42828;
+    color: white;
+    font-size: large;
+    width: fit-content;
+    height: fit-content;
+    padding: auto;
+}
+.header .flex .opt-btn:hover {
+    background-color: orangered;
+    
+}
+.header .flex .option-btn:hover {
+    background-color: rgb(47, 182, 182);
+    
+}
+.header .flex .option-btn {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+}
+
+.update-profile form{
+    max-width: 70rem;
+    margin: 0 auto;
+    background-color:#121212;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+    padding:2rem;
+    text-align: center;
+    box-shadow: 0 0 20px #0c0;
+ }
+ 
+ .update-profile form .flex{
+    display: flex;
+    gap:1.5rem;
+    justify-content: space-between;
+    background-color: #111;
+ }
+ 
+ .update-profile form img{
+    height: 15rem;
+    width: 15rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0f0;
+    box-shadow: 0 0 20px #0c0; 
+
+ }
+ 
+ .update-profile form .inputBox{
+    text-align: left;
+    width: 49%;
+ }
+ 
+ .update-profile form .inputBox span{
+    display: block;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    color:#0f0;
+ }
+ .update-profile form .inputBox .box{
+    width: 100%;
+    padding: 0.8rem 1.4rem; /* Adjusted padding from 1.2rem to 0.8rem */
+    font-size: 1.4rem;
+    color: whitesmoke;
+    border: var(--border);
+    border-radius: .5rem;
+    margin: 1rem 0;
+    background-color: #121212;
+}
+
+ 
+ 
+ 
+ 
+
+/* Responsive Design */
+
+
+@media (max-width:991px){
+
+    html{
+       font-size: 55%;
+    }
+    
+ }
+ 
+ @media (max-width:768px){
+ 
+    #menu-btn{
+       display: inline-block;
+    }
+ 
+    .header .flex .navbar{
+       border-top: var(--border);
+       border-bottom: var(--border);
+       background: rgb(35, 34, 34);
+       position: absolute;
+       top:99%; left:0; right:0;
+       transition: .2s linear;
+       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+ 
+    .header .flex .navbar.active{
+       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+ 
+    .header .flex .navbar a{
+       display: block;
+       margin:2rem;   
+       color:#f6f6f6;
+    }
+    .header .flex .navbar a:hover{
+        display: block;
+        margin:2rem;   
+        color:#18a01c;
+     }
+  
+ 
+    .update-profile form .flex{
+       flex-wrap: wrap;
+       gap:0;
+    }
+ 
+    .update-profile form .flex .inputBox{
+       width: 100%;
+    }
+ 
+ }
+ 
+ @media (max-width:450px){
+ 
+    html{
+       font-size: 50%;
+    }
+ 
+    .flex-btn{
+       flex-flow: column;
+       gap:0;
+    }
+ 
+    .title{
+       font-size: 3rem;
+    }
+    
+ }
+ 
+
+/* Adjustments for Bootstrap components if needed */
+/* search_page*/
+
+/* Search Form Styles */ /* head.css */
+
+
+
+
+.logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.icons a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.user-profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-profile p {
+    margin: 0;
+    color: white;
+}
+
+
+
+
+/* Style for the search container */
+
+
+
+.search-form {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    border-bottom: 2px solid #4CAF50;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-color: wheat;
+    border-width: 2px;
+}
+
+.search-container .box {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #2d2d2d;
+    color: #fff;
+    width: 100%;
+    border-color: wheat;
+    border-width: 2px;
+    border-radius: 13px;
+    margin-left: 0;
+}
+
+.search-container .search-btn {
+    margin-left: -27px;
+    padding: 8px;
+    background-color: #4CAF50;
+    border-radius: 13px;
+    cursor: pointer;
+    font-size: 6px;
+    color: #fff;
+}
+
+
+.search-container .sort-dropdown,.search-container .filter-dropdown {
+    width: 70%;
+    margin-left: 0;
+}
+
+.search-products {
+    padding: 20px;
+}
+
+.search-products .sbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.search-products .sbox-container .sbox {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+    width: calc(50% - 20px); /* Two boxes per row for larger screens */
+    max-width: 300px; /* Adjust max-width as needed */
+    height: 300px; /* Adjust height as needed */
+}
+
+.search-products .sbox-container .sbox:hover {
+    transform: scale(1.05);
+}
+
+.search-products .sbox-container .product-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.search-products .sbox-container .img-container {
+    padding: 10px;
+}
+
+.search-products .sbox-container .img-container img {
+    max-width:50%; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px;
+}
+
+.search-products .sbox-container .details-container {
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.search-products .sbox-container .name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.search-products .sbox-container .price {
+    font-size: 16px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.search-products .sbox-container .buttons-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-products .sbox-container .option-btn,
+.search-products .sbox-container .btn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+    transition: background-color 0.3s;
+}
+
+.search-products .sbox-container .option-btn:hover,.search-products .sbox-container 
+.btn:hover {
+    background-color: #45a049;
+}
+
+.search-products .sbox-container .empty {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333;
+}
+.heart-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff; /* Initial color */
+}
+.heart-icon.active {
+    color: red; /* Active (clicked) color */
+}
+@media (max-width: 768px) {
+    .search-products .sbox-container .sbox {
+        width: calc(100% - 20px); /* Full width for small screens */
+    }
+}
+@media (min-width: 769px) {
+    .search-container {
+        width: 4100px;
+    }
+
+    .search-container .box {
+        width: 90%;
+        margin-left: 40px;
+    }
+
+    .search-container .search-btn {
+        font-size: 12px;
+        margin-left: -40px; 
+        /* Adjust margin for small screens */
+    }
+
+    .search-containe .filter-dropdown .sort-dropdown,.search-containe .filter-dropdown
+    .filter-dropdown {
+        width: 20px;
+        margin-left: 18px;
+    }
+
+    .search-products .sbox {
+        width: calc(85% - 20px);
+    }
+}
+
+.search-products .empty {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.search-form select,
+.search-products select {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+.products {
+    background-color: #f8f8f8; /* Walmart's product background color */
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+
+
+.btn,
+.option-btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #0078d4; /* Walmart's blue color */
+    color: white;
+    border: none;
+}
+
+.option-btn {
+    background-color: #f8f8f8;
+    color: #0078d4; /* Walmart's blue color */
+    border: 1px solid #0078d4; /* Walmart's blue color */
+}
+
+.option-btn:hover {
+    background-color: #0078d4; /* Walmart's blue color */
+    color: white;
+}
+
+.btn:hover {
+    background-color: #00539f; /* Walmart's dark blue color on hover */
+}  
+/* viewpage.php*/
+.quick-view{
+    
+    padding: 10px 0;
+    text-align: left;
+    background-color:#222222 ;
+}
+.quick-view .title{
+    font-size: 36px;
+    color: whitesmoke;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.quick-view .vbox img{
+    max-width: 50%; /* Set max-width to 40% */
+    background-color: #222222;
+    height: auto;
+    border-radius: 1px;
+    margin: 0 auto;
+    position: relative;
+      display: inline-block;/* Adjust based on your layout */
+      
+}
+.quick-view .vbox .name  {
+    font-size: 23px; /* Adjusted font size */
+    color: whitesmoke; /* Dark gray text color */
+    padding: 3px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    margin-left: 10px; /* Add margin to improve visibility */
+}
+.quick-view .vbox .details{
+
+    color: white;
+    font-size: medium;
+}
+
+.quick-view .vbox .price{
+    font-size: 23px;
+    color: #0c0;
+    margin-left: 10px;
+}
+
+.quick-view .vbox .btn, .quick-view .vbox .option-btn {
+    background: #33cc33; /* Red button color for "Add to Wishlist" */
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold; /* Adjusted font size */
+    margin: 5px; /* Add minimal gap between buttons */
+    transition: background-color 0.3s;
+}
+.quick-view .vbox .option-btn {
+    background:rgb(255, 37, 74);  /* Red button color for "Add to Wishlist" */
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 10px; /* Adjusted font size */
+    margin: 5px; /* Add minimal gap between buttons */
+    transition: background-color 0.3s;
+    font-weight: bold;
+
+}
+
+.quick-view .vbox .btn:hover, .quick-view .vbox .option-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #18a01c; /* Glow effect on hover */
+    color: white; /* White text color on hover */
+}
+
+.prev, .next {
+    background-color: #000000; /* Bright background for visibility */
+    color: white; /* Contrasting text color */
+    font-size: 24px; /* Adjust size for better visibility */
+    border: 2px solid #0c0; /* Green border for visibility */
+    cursor: pointer;
+    position: fixed;
+    width:5rem;
+    height:5rem;
+    border-radius: 50%;
+    margin-top: 25%;
+    /* Increase z-index to ensure it's above other elements */
+}
+ .prev {
+    left: 10; /* Adjusted to ensure it's within view */
+ }
+
+ .next {
+    right: 10; /* Adjusted to ensure it's within view */
+    border: 2px solid #0c0; 
+ }
+/* Sponsored Products Section */
+.sponsored-products {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+}
+
+.sponsored-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsored-product {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Product Image */
+.sponsored-product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Product Info Container */
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: -40px; /* Adjust as needed */
+    z-index: 1;
+}
+
+/* Product Name */
+.info-container .name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Product Price */
+.info-container .price {
+    font-size: 16px;
+    color: #f39c12;
+}
+
+/* Buttons Container */
+.btn-container {
+    margin-top: 10px;
+}
+
+/* Heart and Cart Buttons */
+.btn-container button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Quantity Input */
+.qty
+
+
+.product-detail {
+    flex-grow: 1;
+    padding: 0 20px; /* Allow the details container to grow and fill the available space */
+ }
+
+/*  our products */
+/* Base Styles for Our Products Section */
+.our-products {
+    background-color: rgb(40, 39, 39); /* Dark background */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.our-products .title {
+    font-size: 2em;
+    color: #0c0; /* Neon blue for title to pop on dark background */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #0c0, 0 0 20px #0c0, 0 0 30px #0c0; 
+}
+
+.our-products .pbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.our-products .pbox {
+    position: relative;
+    border-radius: 5px;
+    border: 2px solid #0a0b0e; /* Subtle border color */
+    width: 220px;
+    margin: 10px;
+    background-color: #292828; /* Slightly lighter than the main background for contrast */
+    transition: transform 0.3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.our-products .pbox:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    text-shadow: 0 0 10px #0c0, 0 0 20px #0c0, 0 0 30px #0c0; 
+    box-shadow: 0 0 10px #0c0; 
+}
+
+.our-products .pbox .name {
+    color: #FFD700; /* Neon yellow for product names for high visibility */
+    font-size: 0.9rem; 
+    margin: 5px;
+}
+.our-products .pbox .sub-total{
+    color: whitesmoke;
+}
+.cart-total-box {
+    border: 2px solid #0c0; /* Example border */
+    padding: 20px;
+    width: 300px; /* Adjust the width as needed */
+    margin: auto; /* Center the box */
+    background-color: #323131; /* Light grey background */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+}
+
+.cart-total-box p, .cart-total-box a {
+    display: block; /* Makes each element take the full line */
+    text-align: center; /* Centers the text */
+    margin: 10px 0; /* Adds some space between the elements */
+    width: 90%; /* Makes the width of the buttons 90% of the container */
+    margin-left: auto; /* Centers the buttons and paragraph horizontally */
+    margin-right: auto;
+    color: wheat;
+    font-weight: bolder;
+}
+
+.cart-total-box a {
+    padding: 10px; /* Adds some padding inside the buttons for better visibility */
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* White text color */
+    border-radius: 5px; /* Optional: Rounds the corners of the buttons */
+}
+
+.cart-total-box .cart-total-box .option-btn {
+    background-color: #4CAF50; /* Green background */
+    columns: black;
+}
+
+.cart-total-box .delete-btn {
+    background-color: #f44336; /* Red background */
+}
+
+.cart-total-box .delete-btn.disabled,.cart-total-box .btn.disabled {
+    background-color: #cccccc; /* Gray background for disabled buttons */
+    color:white;
+    cursor: not-allowed;
+}
+
+.cart-total-box .btn {
+    background-color: #15a6e0; /* Blue background */
+    color: white;
+}
+
+
+.our-products .pbox .price {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #d40404; /* Neon pink for price tags to stand out */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+.our-products .pbox img {
+    width: 90%; /* Full width */
+    height: auto;
+    margin-top: 5px; /* Adds some space at the top */
+}
+.our-products .pbox .btn-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    justify-content: center; /* Aligns buttons horizontally */
+    gap: 5px; /* Adds space between buttons */
+    padding: 5px; /* Space at the bottom */
+    background-color: #202020; /* Dark background for the container */
+}
+
+.our-products .pbox .btn, .our-products .pbox .option-btn {
+    background: #0db9d7; /* Neon Blue for Add to Cart */
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    height: fit-content;
+    width: fit-content;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 0.75rem; /* Responsive font size */
+    font-weight: bold;
+    margin: 5px; /* Ensures minimal gap between buttons */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.our-products .pbox .option-btn {
+    background: #e20d0d; /* Neon Pink for Add to Wishlist */
+}
+
+.our-products .pbox .btn:hover, .our-products .pbox .option-btn:hover {
+    transform: scale(1.05); /* Slightly enlarges buttons on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    background-color: #18a01c;
+}
+
+
+.our-products .pbox .qty {
+    width: 100%;
+    max-width: 45px; /* Restricting width of the qty box */
+    padding: 5px;
+    margin: 10px auto; /* Centering the qty box */
+    border-radius: 5px;
+    border: 2px solid yellowgreen;
+    background-color: #000;
+    color: floralwhite;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .our-products .pbox {
+        max-width: 45%; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .our-products .pbox {
+        max-width: 90%; /* Full width on very small screens */
+    }
+}
+
+
+/*  grocery products */
+/* grocery Products Section */
+/* grocery Products Section */
+
+/* Responsive Adjustments */
+/*view page*/
+
+/*casarole image slider*/
+#carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative; /* Added to position navigation buttons */
+}
+
+#carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    max-height: 300px; /* Adjust the maximum height as needed */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 100%; /* Ensure the image doesn't exceed the container height */
+}
+
+/* Navigation buttons (optional) */
+.carousel-btn {
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+}
+
+#prev-btn {
+    left: 10px;
+}
+
+#next-btn {
+    right: 10px;
+}
+
+
+
+/* Existing styles */
+
+
+@media (max-width:768px){
+
+    .home-bg{
+       background-position: left;
+    }
+ 
+    .home-bg .home{
+       justify-content: center;
+       text-align: center;
+    }
+ 
+    .checkout-orders form .flex .inputBox{
+       width: 100%;
+    }
+ 
+ }
+ 
+ @media (max-width:450px){
+ 
+    .home-category .box-container{
+       grid-template-columns: 1fr;
+    }
+ 
+    .products .box-container{
+       grid-template-columns: 1fr;
+    }
+ 
+    .quick-view .box img{
+       height: auto;
+       width: 100%;
+    }
+ 
+    .about .row .box img{
+       width: 100%;
+       height: auto;
+    }   
+ 
+    .shopping-cart .box-container{
+       grid-template-columns: 1fr;
+    }
+ 
+    .wishlist .box-container{
+       grid-template-columns: 1fr;
+    }
+ 
+ }
+
+ 
+ @media (max-width:350px){
+ 
+    .home-category .cbox-container{
+       grid-template-columns: 1fr;
+    }
+ 
+    .products .cbox-container{
+       grid-template-columns: 1fr;
+    }
+ 
+    .quick-view .cbox img{
+       height: auto;
+       width: 100%;
+    }
+ 
+    .about .row .cbox img{
+       width: 100%;
+       height: auto;
+    }   
+ 
+    .shopping-cart .cbox-container{
+       grid-template-columns: 1fr;
+    }
+ 
+    .wishlist .cbox-container{
+       grid-template-columns: 1fr;
+    }
+ 
+ }
+/* Adjustments for tablets and below */
+@media (max-width: 768px) {
+    .cbox-container .cbox {
+        width: 150px; /* Smaller size for smaller screens */
+        height: 150px;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cbox-container .cbox {
+        width: 120px; /* Even smaller for very small screens */
+        height: 120px;
+        padding: 0.25rem;
+    }
+}
+
+
+.show-products {
+    /* Add any styles you want for the section */
+    background-color: aliceblue;
+ }
+ .show-products .title {
+    text-align: center; /* Aligns the text to the center */
+    color: black; /* Sets the text color to black */
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: 28px;
+}
+
+ 
+ .show-products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+ }
+ 
+ .show-products .box-container .box {
+    width: 100%; /* Adjust as needed */
+    border: 1px solid #363535;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ 
+ .show-products .box-container .box .product-info {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+ }
+ 
+ .show-products .box-container .box .product-info img {
+    width: 40px; /* Adjust the image size as needed */
+    height: auto;
+    margin-right: 10px;
+ }
+ .show-products .box-container .box .flex-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.show-products .box-container .box .flex-btn a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Update button */
+.show-products .box-container .box .flex-btn a.option-btn {
+    border: 2px solid #1f1f1f;
+    color: #33cc34;
+}
+
+.show-products .box-container .box .flex-btn a.option-btn:hover {
+    background-color: #33cc35;
+    color: white;
+    border-color: #3ce34d;
+}
+
+/* Delete button */
+.show-products .box-container .box .flex-btn a.delete-btn {
+    border-color: red;
+    color: red;
+}
+
+.show-products .box-container .box .flex-btn a.delete-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Consistent height for buttons */
+.show-products .delete-btn, .show-products .option-btn {
+    height: 36px;
+    line-height: 36px;
+}
+
+
+ 
+ .show-products .box-container .box .cat{
+    font-size: 1.8rem;
+    color:#33cc37;
+ }
+ 
+ .show-products .box-container .box .details{
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color:var(--light-color);
+ }
+ .show-products .box-container .box .product-info .name {
+    font-size: 1.5rem;
+    color: white; /* Adjust the color as needed */
+    font-weight: bold;
+    margin-right: 30px;
+ }
+ 
+.update-product form{
+    max-width: 50rem;
+    padding:2rem;
+    margin:0 auto;
+    text-align: center;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+    border-radius: .5rem;
+ }
+ 
+ .update-product form img{
+    height: 25rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+ }
+ 
+ .update-product form .box{
+    width: 100%;
+    border:var(--border);
+    background-color: var(--white);
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+    padding:1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color:var(--black);
+    margin:1rem 0;
+ }
+ 
+ /* Basic Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+ }
+ 
+ body {
+    background-color: #121212; /* Dark background for gaming vibe */
+    color: #fff; /* Light text for contrast */
+    font-family: 'Poppins', sans-serif;
+ }
+ 
+ a {
+    color: inherit;
+    text-decoration: none;
+ }
+ 
+ /* Header and Titles */
+ .title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2em;
+    color: #4CAF50; /* Greenish tone for energetic feel */
+ }
+ 
+ /* Orders Box */
+ .placed-orders .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: left;
+    padding: 20px;
+ }
+ 
+ .placed-orders .box {
+    background: #222; /* Slightly lighter shade for the boxes */
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(33.333% - 20px); /* Three items per row */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .placed-orders .box p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #ddd; /* Light grey for readability */
+    text-align: left;
+ }
+ 
+.placed-orders .box p span {
+    color: #4CAF50; /* Highlighted information in green */
+    text-align: left;
+ }
+ 
+ /* Form and Buttons */
+ .placed-orders .drop-down {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+ }
+ 
+.placed-orders .flex-btn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+ }
+ 
+ .placed-orders .option-btn, .placed-orders .delete-btn {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #33cc35; /* Blue for options */
+ }
+ 
+ .placed-orders .delete-btn {
+    background-color: #FF5722; /* Red for delete */
+ }
+ 
+ .placed-orders .option-btn:hover, .delete-btn:hover {
+    opacity: 0.9;
+ }
+ 
+ /* Responsive Design */
+ @media (max-width: 992px) {
+    .placed-orders  .box {
+       width: calc(50% - 20px); /* Two items per row */
+    }
+ }
+ 
+ @media (max-width: 768px) {
+    .placed-orders  .box {
+       width: 100%; /* Full width for smaller screens */
+    }
+ }
+ .user-accounts .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user-accounts .box {
+    max-width: 1300px; /* Maximum width for larger screens */
+    width: 100%; /* Full width on smaller screens */
+    min-height: 40px; /* Adjusted for content scaling */
+    border: 1px solid #ccc;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+    background-color: #1e1e1e;
+}
+
+.user-accounts .box .user-info {
+    flex-grow: 1;
+    padding: 0 10px;
+    text-align: left;
+}
+
+.user-accounts .box .user-info p {
+    padding-top: 1px; /* Adjusted padding */
+    margin-right: 20px;
+    text-align: left;
+    color: #18a01c;
+    font-size: 1.2em; /* Adjusted font size */
+}
+
+.user-accounts .box .user-info p span {
+    color: white;
+}
+
+.user-accounts .box .delete-btn {
+    padding: 5px 10px;
+    margin: 5px; /* Added margin for spacing */
+    background-color: #1e1e1e;
+    color: red;
+    text-decoration: none;
+    border-radius: 23px;
+    border: 1px solid red;
+    
+}
+
+.user-accounts .box .delete-btn:hover {
+    background-color: red;
+    color:#1e1e1e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .user-accounts .box {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .user-accounts .box .user-info, .user-accounts .box .delete-btn {
+        width: 100%; /* Full width for children */
+        text-align: center; /* Center align the text */
+        padding: 5px 0; /* Adjust padding */
+    }
+
+    .user-accounts .box .user-info p {
+        margin: 0; /* Remove margin */
+        padding: 5px 0; /* Adjust padding */
+    }
+}
+
+/* If you have specific CSS variables defined like --border, --box-shadow, --white, --light-color, and --green, replace the example values with those variables. */
+
+ .messages .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 33rem);
+    gap:1.5rem;
+    align-items: flex-start;
+    justify-content:center;
+ }
+ 
+ .messages .box-container .box{
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding:2rem;
+ }
+ 
+ .messages .box-container .box p{
+    line-height: 1.5;
+    padding:.5rem 0;
+    font-size: 2rem;
+    color:var(--light-color);
+ }
+ 
+ .messages .box-container .box p span{
+    color:var(--green);
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ @media (max-width:768px){
+ 
+    .add-products form .flex .inputBox{
+       width: 100%;
+    }
+ 
+ }
+ 
+ 
+ 
+ @media (max-width:450px){
+ 
+    .show-products .box-container{
+       grid-template-columns: 1fr;
+    }
+ 
+    .update-product form img{
+       height: auto;
+       width: 100%;
+    }
+ 
+    .placed-orders .box-container{
+       grid-template-columns: 1fr;
+    }
+ 
+    .user-accounts .box-container{
+       grid-template-columns: 1fr;
+    }
+ 
+    .messages .box-container{
+       grid-template-columns: 1fr;
+    }
+ 
+ }
+/* Dashboard and Box Styles */
+.dashboard {
+    padding: 2rem;
+  }
+  
+  .dashboard .title {
+    color: #4CAF50; /* Green color for gaming vibe */
+    text-align: center;
+    margin-bottom: 2rem;
+    transform: translateY(-5px);
+    text-shadow: 0 0 20px #4CAF50; 
+  }
+  
+  .dashboard .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #4CAF50; 
+   
+
+  }
+  
+  .dashboard .box-container .box {
+    width: 200px; /* Fixed width */
+    height: 250px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Adjusted for internal spacing */
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    background: #222;
+    border: 1px solid #333;
+    border-radius: .5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .dashboard .box-container .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #4CAF50; /* Green glow on hover */
+  }
+  
+  .dashboard .box-container .box h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4CAF50; /* Highlight numbers or important info */
+  }
+  
+  .dashboard .box-container .box p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ccc; /* Lighter text color for contrast */
+  }
+  
+  .dashboard .box-container .box .btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #4CAF50; /* Gaming green for buttons */
+    color: #fff;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-color: none;
+  }
+  
+  .dashboard .box-container .box .btn:hover {
+    background-color: #205832; /* Darker green on hover */
+    font-weight: bold;
+  }
+  
+  /* Responsive Typography */
+  @media (max-width: 768px) {
+    .dashboard .title {
+      font-size: 1.5rem;
+    }
+  
+    .dashboard .box-container .box h3 {
+      font-size: 1.5rem;
+    }
+  
+    .dashboard .box-container .box p {
+      font-size: .875rem;
+    }
+  }
+  
+ 
+.add-products {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e; /* Slightly lighter dark shade for the form background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Neon green glow */
+ }
+ 
+ .add-products .title {
+    text-align: center;
+    color: #0f0; /* Neon green text */
+    margin-bottom: 20px;
+ }
+ 
+ .add-products .flex {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+ 
+ .add-products .flex .inputBox {
+    flex-basis: 48%; /* Adjust based on preference */
+ }
+ 
+ .add-products .flex .inputBox .box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #262626; /* Even lighter dark shade for input backgrounds */
+    border: 1px solid #0f0; /* Neon green borders */
+    border-radius: 4px;
+    color: #fff;
+ }
+ 
+ .add-products .flex .inputBox .box::placeholder {
+    color: #aaa; /* Lighter placeholder text for contrast */
+ }
+ 
+ .add-products .flex .inputBox .box, textarea.box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #262626; /* Even lighter dark shade for input backgrounds */
+    border: 1px solid #0f0; /* Neon green borders */
+    border-radius: 4px;
+    color: #fff;
+}
+
+.add-products .flex .inputBox .box::placeholder, textarea.box::placeholder {
+    color: #aaa; /* Lighter placeholder text for contrast */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0f0; /* Neon green background */
+    color: #000; /* Dark text */
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0c0; /* Slightly different shade of green for hover */
+    color: #fff;
+}
+
+
+ .add-products .flex .btn {
+    display: inline-block;
+    background-color: #0f0; /* Neon green background */
+    color: #000; /* Dark text */
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+ }
+ 
+ .add-products .flex .btn:hover {
+    background-color: #0c0; /* Slightly different shade of green for hover */
+    color: #fff;
+ }
+ .show-products form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.show-products input[type="text"] {
+    width: 50%; /* Large width for the search box */
+    padding: 12px 20px;
+    margin-right: -4px; /* Adjust based on your design */
+    border: 1px solid #333; /* Thicker border for a bold look */
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
+    background-color: #fff9f9; /* Dark theme background */
+    color: #323131; /* Light text for contrast */
+    font-size: 16px; /* Larger font size */
+}
+
+.show-products button {
+    padding: 12px 20px;
+    border: 1px solid #333; /* Matching border with the input */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+    cursor: pointer;
+    background-color:red; /* Vibrant button color */
+    color: black;
+    font-size: 16px; /* Matching font size with the input */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.show-products button:hover {
+    background-color: #33cc39; /* Darker shade on hover for the button */
+}
+
+/* Additional style to ensure the input and button align properly */
+.show-products form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust the width responsively for smaller screens */
+@media (max-width: 768px) {
+    .show-products input[type="text"] {
+        width: 70%; /* Larger width on smaller screens */
+    }
+}
+
+ /* Responsive adjustments */
+ @media screen and (max-width: 768px) {
+    .add-products .flex {
+        flex-direction: column;
+    }
+ 
+    .add-products .flex .inputBox {
+        flex-basis: 100%;
+    }
+ }
+
+ /*messsage contact.php*/
+ 
+ 
+.messages .title {
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.messages .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: left;
+}
+
+.messages .box-container .box {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.3s ease;
+    width: 450px; /* Adjust width as needed */
+    text-align: left; 
+}
+
+.messages .box-container .box:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.messages .box-container .box p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.messages .box-container .box span {
+    font-size: large;
+}
+
+.messages .box-container .box .delete-btn {
+    color: #ff3860;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border: 2px solid #ff3860;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.messages .box-container .box .delete-btn:hover {
+    background-color: #ff3860;
+    color: #fff;
+}
+
+.messages .box-container .box .empty {
+    text-align: center;
+    font-style: italic;
+    color: #ddd;
+}
+/*about.php*/
+.row {
+    background-color: #1f1f1f;
+    align-content: center;
+}
+
+.row-container .row .box {
+    border-radius: 4.5px;
+    border-color: #0c0;
+    border-width: 2.4px;
+    border-style: solid;
+    padding: 20px;
+    width: calc(25% - 10px); /* Adjust based on your layout */
+    text-align: left;
+    background-color: rgba(125, 125, 125, 0.1);
+    transition: border-color 0.3s;
+    margin-right: 20px;
+    margin-left: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.row .box p {
+    color: #f8f8f8;
+}
+
+.row .box h3 {
+    color: #0c0;
+}
+
+.row .btn {
+    display: block;
+    width: auto;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #0f0; /* Neon accent for the button, can adjust color */
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.row .btn:hover {
+    background-color: #08d9a7; /* Slightly darker or lighter on hover */
+}
+
+@keyframes moveRightToLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animated-text {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: moveRightToLeft 8s linear infinite; /* Adjust duration as needed */
+}
+
+.banner-image {
+    display: block; /* Change from none to block */
+    width: 100%;
+    height: auto; /* Adjust based on your aspect ratio needs */
+    position: absolute; /* Make images overlap */
+    opacity: 0; /* Start images as invisible */
+    transition: opacity 2s ease-in-out; /* Smooth transition for opacity change */
+}
+
+#banner {
+    position: relative;
+    width: 100%;
+    max-height: 25vw; /* Adjust based on your needs */
+    overflow: hidden;
+}
+
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+    .row-container .row .box {
+        width: calc(50% - 20px); /* Adjust the width for small screens */
+        margin-left: 20px; /* Reduce margin for small screens */
+    }
+
+    .row .btn {
+        padding: 8px;
+        font-size: 0.9em; /* Adjust font size for better fit on small screens */
+    }
+
+    /* Optional: Adjust font sizes for smaller screens */
+    .row .box h3 {
+        font-size: 1.2em;
+    }
+
+    .row .box p {
+        font-size: 0.9em;
+    }
+
+    #banner {
+        max-height: 200px; /* Adjust the maximum height of the banner for small screens */
+    }
+}
+
+/* Gaming Theme Contact Section CSS */
+.contact {
+    background-color: #121212; /* Dark background for that gaming vibe */
+    color: #ffffff;
+    padding: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title {
+    color: #76ff03; /* Neon green for titles, adjust the color to fit your theme */
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 13px;
+}
+
+
+
+@media (max-width: 480px) {
+    .box, .box .btn, .option-btn, .opt-btn {
+        width: auto; /* Allow box to fill available space */
+        margin: 10px; /* Adjust margins for small screens */
+        padding: 5% 5%; /* Adjust padding */
+        font-size: 5vw; /* Increase font size for readability */
+    }
+    
+    .box h3, .box p {
+        font-size: 4vw; /* Adjust heading and paragraph font size for small screens */
+    }
+}
+.contact .btn {
+    display: block;
+    width: auto;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #0f0; /* Neon accent for the button, can adjust color */
+    color: #f6f6f6;
+    border: none;
+    border-radius: 5px;
+    border-color: #0c0;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-left: 15px;
+}
+
+.contact .btn:hover {
+    background-color: #08d9a7; /* Slightly darker or lighter on hover */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .contact {
+        padding: 20px;
+    }
+}
+ .products .box-container .box .p{
+    color: white;
+ }
+
+ /*checkout order*/
+ .checkout-orders .flex .btnn {
+    background-color: #0f0;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-orders .flex .btnn .disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.checkout-orders .flex .btnn:hover {
+    background-color: #090;
+}
